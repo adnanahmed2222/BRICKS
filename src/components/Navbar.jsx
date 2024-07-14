@@ -4,6 +4,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import Badge from '@mui/material/Badge';
 import MapsHomeWorkIcon from '@mui/icons-material/MapsHomeWork';
 import { ShoppingCartOutlined } from '@mui/icons-material';
+import {mobile} from "../responsive"
 
 const Container = styled.div`
   height: 60px;
@@ -12,7 +13,7 @@ const Container = styled.div`
   font-family: "Urbanist", sans-serif;
   display: flex;
   align-items: center;
-  
+  ${mobile({height:"50px"})}
 `;
 
 const Wrapper = styled.div`
@@ -43,11 +44,14 @@ const Right = styled.div`
   flex: 1;
   align-items: center;
   justify-content: flex-end;
+  ${mobile({flex:2,justifycontent:"center"})}
+
 `;
 const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
   margin-left: 25px;
+  ${mobile({fontsize:"12px", marginLeft: "10px"})}
 `
 
 const SearchContainer = styled.div`
@@ -62,13 +66,20 @@ const SearchContainer = styled.div`
 const Input = styled.input`
   border: none;
   outline: none;
+  ${mobile({width:"50px"})}
 `;
 
 const Logo = styled.h1`
   font-weight: bold;
-`;
+  ${mobile({fontsize:"24px"})}
+`
 
-const Language = styled.div``;
+const Language = styled.div`
+  font-size: 14px;
+  cursor:pointer;
+  ${mobile({display:"none"})}
+
+`;
 
 const Navbar = () => {
   return (
